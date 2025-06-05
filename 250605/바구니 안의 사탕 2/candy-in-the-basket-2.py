@@ -20,12 +20,15 @@ for i in range(N):
 sorted_keys = sorted(main_dict.keys())
 global_max = 0
 
-for i in range(sorted_keys[0], sorted_keys[-1] - K):
-    local_sum = 0
-    for j in range(i, i+2*K+1):
-        if main_dict.get(j, 0) != 0:
-            local_sum += main_dict[j]
+if sorted_keys[-1] > K:
+    for i in range(sorted_keys[0], sorted_keys[-1] - K):
+        local_sum = 0
+        for j in range(i, i+2*K+1):
+            if main_dict.get(j, 0) != 0:
+                local_sum += main_dict[j]
         
-    global_max = max(global_max, local_sum)
+        global_max = max(global_max, local_sum)
+else:
+    global_max = sum(candy)
 
 print(global_max)
