@@ -6,4 +6,4 @@ diff_from_H_to_Arr = []
 for num in arr:
     diff_from_H_to_Arr.append(abs(H-num))
 
-print(sum(sorted(diff_from_H_to_Arr, reverse=True)[T:]))
+print(sum(sorted(diff_from_H_to_Arr)[:T]))
