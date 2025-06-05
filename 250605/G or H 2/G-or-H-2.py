@@ -18,9 +18,6 @@ for i in range(n):
     new_pos.append(sorted_keys[i])
     new_alpha.append(main_dict[sorted_keys[i]])
 
-print(new_pos)
-print(new_alpha)
-
 for i in range(n):
     for j in range(i, n):
         if new_alpha[i:j+1].count('G') == 0 or new_alpha[i:j+1].count('H') == 0 or new_alpha[i:j+1].count('G') == new_alpha[i:j+1].count('H'):
